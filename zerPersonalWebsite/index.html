@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persional Protfolio Website</title>
+    <!-- styles.css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- hero Section start -->
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo">個人<span>網頁</span></h2>
+            <ul>
+                <li><a href="#aboutMe">關於我</a></li>
+                <li><a href="#skillText">技能</a></li>
+                <li><a href="#work">作品</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h4>您 好, 我 的 名 子 是</h4>
+            <h1>吳旻澤 <span>(Zer)</span></h1>
+            <h3>我是網頁前端工程師.</h3>
+            <h5>以下是我的簡介，希望有幫助您更認識我 @W@</h5>
+        </div>
+
+    </div>
+
+    <!-- About section start -->
+    <section class="about" id="aboutMe">
+        <div class="main">
+            <img src="img/main-img.jpg" id="aboutMeImg">
+            <div class="about-text" id="aboutText">
+                <h2>關於我</h2>
+                <h5>開發  <span>&  設計</span></h5>
+                <p>網頁前工程師。畢業於多媒體科系，2022年參加政府補助的AI資料科學家人才養成班，習得基礎Python技能，在國家衛生研究院-生醫工程與奈米醫學研究所，擔任助理研究人員，負責生物研究人工程需求支援，目前對網頁前端、網頁資料視覺化特別有興趣，日後會對Canvas API、Three.js、WebGL進行更近一步的了解，想做出使用者體驗良好的3D互動網頁。</p>
+                <button type="button" onmouseover="changeText(this)">碰看看</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section -->
+    <section class="skill">
+        <div class="skillTop" id="skillTop">
+            <div id="skillText">
+                <h2>技能</h2>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+
+            <div class="skillContent">
+                <p><span>H</span>TML / <span>C</span>SS / <span>J</span>avaScript</p>
+                <p>j<span>Q</span>uery</p>
+                <p><span>B</span>ootstrap</p>
+                <p><span>V</span>ue</p>
+                <p><span>G</span>it</p>
+                <p><span>P</span>hotoshop</p>
+                <p><span>P</span>remiere</p>
+                <p><span>A</span>fter <span>E</span>ffect</p>
+            </div>
+        </div>
+
+        <div class="skillDown" id="skillDown">
+            <div id="skillText">
+                <h2>經歷</h2>
+                <i class="fa-solid fa-file"></i>
+            </div>
+
+            <div class="skillContentDown">
+                <p><span>國家</span>衛生研究院</p>
+                <p>1 .網頁<span>前端</span></p>
+                <p>2. <span>影片</span>製作</p>
+                <p>3. <span>機構</span>設計</p>
+                <p>4. <span>3 D</span> 列印</p>
+                <p>5. <span>專案</span>經理</p>
+                <p>6. 行政<span>支援</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- work section start -->
+    <div class="work" id="work">
+        <div class="title" id="workTitle">
+            <h2>作 品</h2>
+        </div>
+
+        <div class="box" id="workBox">
+
+            <div class="card">
+                <i class="fa-brands fa-html5"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-brands fa-js"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-brands fa-bootstrap"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box" id="workBox2">
+
+            <div class="card">
+                <i class="fa-brands fa-vuejs"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-brands fa-js"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-brands fa-bootstrap"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website shiuld be built with two primary goals: Firstly, it needs to work across all device. Secondly, it needs to be fast as possible.</p>
+                
+                <p style="text-align: center;">
+                    <a href="#" class="button">Go to</a>
+                </p>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    <!-- Contact Me -->
+    <div class="contact-me" id="backTop">
+        <p>回到頂部</p>
+        <a href="#" class="button-two" id="backTopIcon"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>吳旻澤<span>(Zer)</span></p>
+        <p>更多的 HTML, CSS and JavaScript 程式專案 - 請點擊下方按鈕連結去觀看更多資訊。</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UCJadawnbfXP4ln4OTdq61qA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="end">CopyRight By Zer</p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
