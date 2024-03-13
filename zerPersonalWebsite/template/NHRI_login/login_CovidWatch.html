@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>NHRI</title>
+        <link rel="stylesheet" href='login_CovidWatch.css'>
+    </head>
+
+    <body style="margin: 0; background-color: #39BAE8;">
+
+        <nav class="topbg"></nav>  <!--top white-->
+
+        <div class="bg">           <!--center blue-->
+
+            <div class="imgb imgb-animation">     <!--img background-->
+                
+                <div class="loginbox">
+
+                    <div>
+
+                        <form method="POST" action="/SelectPage">
+                            <input type="text" name="account" value="1" placeholder="請輸入帳號" style="width:250px; height:40px; font-size:30px;margin-top: 3.5rem;">
+                            <br/>
+                            <input type="password" name="password" value="1" placeholder="請輸入密碼" style="width:250px; height:40px; font-size:30px;margin-top: 2rem;">
+                            <br/>
+                            <button id="btn11" type="submit" class="btn btn1 btn1h" type="button" style="width:258px; height:40px;font-size:25px;margin-top: 2rem;background-color: #B9EDF8;">登入</button>
+                        </form>
+
+                        <div style="border-bottom: 1px solid #101216; margin-top: 2.5rem;"></div>
+
+                        <div style="width: 258px; height:50px; margin-top: 1.2rem;display: flex;flex-direction: column; align-items: center;justify-content: center;">
+                            <a style="margin-bottom: 5px;"> R1-1117 生醫工程與奈米醫學研究所</a>
+                            <b><a style="font-size: 1.2rem;">Dr.廖倫德實驗室</a></b>
+                        </div>
+
+                        <div style="width: 258px; height:50px; margin-top: 1.2rem;display: flex;flex-direction: column; align-items: center;justify-content: center;margin-bottom: 1.2rem;">
+                            <form id="trgt" method="POST" action="/register">
+                            <button id="btn22" type="submit" class="btn btn2" style="width: 129px;height: 40px;font-size:20px; background-color: rgba(138, 255, 216, 0.794);">註冊</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src='login_CovidWatch.js'></script>
+
+    </body>
+    
+</html>

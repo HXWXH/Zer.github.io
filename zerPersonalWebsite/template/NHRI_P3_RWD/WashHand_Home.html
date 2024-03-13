@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3 Laboratory</title>
+    
+    <link href='WashHand_Home.css' rel="stylesheet">
+</head>
+
+<body style="margin: 0;">
+    <div class="body_control">
+
+        <div class="outer_frame test_img1">
+
+              <div class="left_frame">
+
+                  <div class="img_test_up">
+                      <!-- <span><p style='position: absolute;font-size: 500%;'>Img</p></span> -->
+                      <img src='img/demo_front2.jpg' class="D_img">
+                  </div>
+          
+                  <div class="img_test_down">
+                      <!-- <span><p style='position: absolute;font-size: 500%;'>Img</p></span> -->
+                      <img src='img/demo_back2.jpg' class="D_img">
+                  </div>
+
+              </div>
+
+              <div class="middle_frame">
+                  <!-- <span><p style='position: absolute;font-size: 500%;'>Webcam</p></span> -->
+                  <img src="{{ url_for('video_feed') }}" width="100%" height="100%" style="border-radius: 10px;">
+              </div>
+      
+            <div class="right_frame">
+
+                  <div>
+
+                      <!--<p style="font-size: 2.5vh;">TODO: Not finish yet</p>-->
+                      <div id="show_result" class="time_cube">
+                      </div>
+                      <br>
+                      <!--<div id="time"></div>-->
+                      <div id="test" class="time_cube"></div>
+                      <br>
+                      <div id="test1" class="time_cube"></div>
+                      <br>
+                      <div id="test2" class="time_cube"></div>
+
+                  </div>
+
+                <script>
+
+                    var fruits = ["",""];      //Adjust the values in the array according to the quantity to be displayed
+                    //fruits.push("event.data" + "\n\n");
+                    var source = new EventSource('/update');
+                    source.addEventListener('message', function(event){
+                        const show_result = document.getElementById('show_result');
+                        show_result.innerHTML = "";
+                        console.log(JSON.stringify(event.data));
+                        show_result.innerHTML = event.data;
+                    }, false);
+
+                    /*
+                    source.addEventListener('message' , function(event){
+                        if (fruits.length === 3) {      //length:返回字符串的字符数
+                            fruits.shift();             //shift():刪除數組中的第一個項目
+                        }
+                        //document.getElementById("time").innerHTML = event.data;
+                        document.getElementById("test").innerHTML = fruits.push(event.data);    //push():數組中添加新元素
+                        if (fruits[2] === undefined) {
+                            fruits[2] = "";
+                        }
+                        document.getElementById("test").innerHTML = 'Headgear : ' + fruits[2] + '%';
+                        if (fruits[1] === undefined) {
+                            fruits[1] = "";
+                        }
+                        document.getElementById("test1").innerHTML = 'Mask : ' + fruits[1] + '%';
+                        if (fruits[0] === undefined) {
+                            fruits[0] = "";     
+                        }
+                        document.getElementById("test2").innerHTML = 'Not dressed bilayer glove : ' + fruits[0] + '%';  //fruits[0]:可以提取Array指定的索引位置
+                    }, false);
+                    */
+                </script>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

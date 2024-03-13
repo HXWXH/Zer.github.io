@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viweport" content="width=width-device, initial-scale=1.0">
+        <title>Countdown Timer</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body id="body" onload="initial();">
+
+        <div id="container" class="container">
+            
+            <p><strong>Countdown Timer：</strong></p>
+            
+            <div id="countdown"></div>
+
+            <div class="btn-container">
+                <button id="startBtn" onclick="start()" disabled><strong><span class="firstChar">S</span>tart</strong></button>
+                <button onclick="pause()"><strong>pause</strong></button>
+                <button onclick="reset()"><strong>reset</strong></button>
+            </div>
+
+        </div>
+
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>

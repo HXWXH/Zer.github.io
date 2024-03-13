@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{{url_for('static' ,path='reset.css')}}"> -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="{{url_for('static' ,path='login_page.css')}}"> -->
+    <link rel="stylesheet" href="login_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header_bg">
+
+        <div class="header_content">
+
+            <nav class="header_nav">
+
+                <ul class="header_ul">
+
+                    <li class="header_li">
+                        <a class="header_li_a" href="">
+                            <span class="header_li_a_span">
+                                EMDR1
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header_li">
+                        <a class="header_li_a" href="">
+                            <span class="header_li_a_span">
+                                EMDR2                       
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header_li">
+                        <a class="header_li_a" href="">
+                            <span class="header_li_a_span">
+                                EMDR3
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header_li">
+                        <a class="header_li_a" href="">
+                            <span class="header_li_a_span">
+                                EMDR4                       
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header_li">
+                        <a class="header_li_a" href="">
+                            <span class="header_li_a_span">
+                                EMDR5
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <button class="login_button" onclick="EMDR_login_button()">
+
+                <span>
+                    Login
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="main_class">
+
+        <div>
+            
+            <img class="login_frontcover" src='img/EMDR_TEST.png' alt="NHRI">
+        
+        </div>
+        
+        <div class="main_first_describe">
+
+            <div class="main_first_describe_div">
+                <img  class="main_first_describe_img" src='img/brain_wave.png' alt="NHRI">
+                <span class="font_style">EEG</span>
+
+                <div class="font_describe_area">
+                    <p class="font_text_style">EEG testtesttesttesttest testtesttest</p>
+                </div>
+
+            </div>
+
+            <div class="main_first_describe_div">
+                <img  class="main_first_describe_img" src='img/oxygen.png' alt="NHRI">
+                <span class="font_style">PPG</span>
+
+                <div class="font_describe_area">
+                    <p class="font_text_style">PPG testtesttesttesttest testtesttest</p>
+                </div>
+
+            </div>
+
+            <div class="main_first_describe_div">
+                <img  class="main_first_describe_img" src='img/eye_tracking.png' alt="NHRI">
+                <span class="font_style">EYE TRACKINH</span>
+
+                <div class="font_describe_area">
+                    <p class="font_text_style">EYE TRACKINH testtesttest testtesttesttesttest</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="main_second_describe">
+
+            <div class="main_second_describe_div"></div>
+
+            <div class="main_second_describe_div"></div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer_class">
+
+        <p class="footer_text">國家衛生研究院 - 生醫工程與奈米醫學研究所 | 廖倫德實驗室</p>
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+
+    <script>
+
+    function EMDR_login_button() {
+
+        Swal.fire({
+        title: '請輸入帳號密碼',
+        icon: 'info',
+        html:
+            '<label for="swal-input1">帳號</label>'+
+            '<input id="swal-input1" class="swal2-input">' +
+            '<br>'+
+            '<label for="swal-input2">密碼</label>'+
+            '<input id="swal-input2" class="swal2-input">',
+        preConfirm: function(){
+            var val1 = document.getElementById('swal-input1').value,
+                val2 = document.getElementById('swal-input2').value;
+            if(val1 === ''){
+            Swal.showValidationMessage('請輸入帳號');
+            }else if(val2 === ''){
+            Swal.showValidationMessage('請輸入密碼');
+            }else{
+            return [
+                val1+
+                val2
+            ]
+            }
+        }
+        }).then(function(result){
+
+            Swal.fire(
+                `${result.value}`
+            )
+            
+        });
+
+    }
+            
+    </script>
+
+</body>
+</html>
