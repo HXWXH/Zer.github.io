@@ -65,7 +65,7 @@ addEventListener('scroll', () => {
 
 // Work Section eventlistener scroll
 addEventListener('scroll', () => {
-    if (window.scrollY > 2450 && window.scrollY < 3150) {
+    if (window.scrollY > 2450 && window.scrollY < 3500) {
         workTitle.style.visibility = "visible";
         workTitle.style.opacity = "1";
         workTitle.style.transform = "translate(0px, -50px)";
@@ -88,7 +88,7 @@ addEventListener('scroll', () => {
 
 // footer eventListener scroll
 addEventListener('scroll', () => {
-    if (window.scrollY > 3150) {
+    if (window.scrollY > 3500) {
         footer.style.visibility = "visible";
         footer.style.opacity = "1";
         footer.style.transition = "3.5s";
